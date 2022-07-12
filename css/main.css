@@ -13,8 +13,6 @@
 html,
 body {
     font-size: 14px;
-    /* font-family: 'Fraunces', serif;
-    font-family: 'Montserrat', sans-serif; */
     background-color: hsl(30, 38%, 92%);
 }
 
@@ -35,7 +33,11 @@ body {
     position: absolute;
 }
 
-img {
+.mobile {
+    visibility: hidden;
+}
+
+.desktop {
     height: 400px;
     width: 50%;
     border-radius: 10px 0 0 10px;
@@ -55,13 +57,14 @@ img {
     font-size: 30px;
     font-weight: bold;
     font-family: 'Fraunces', serif;
+    padding-right: 15px;
 }
 
 .discription {
     top: 180px;
     left: 330px;
     font-size: 14px;
-    color: rgb(0 0 0 / 62%);
+    color: rgb(0 0 0 / 68%);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -77,12 +80,12 @@ img {
 .price-old {
     top: 285px;
     left: 500px;
-    color: rgb(0 0 0 / 62%);
+    color: rgb(0 0 0 / 68%);
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
 }
 
-.B {
+.btn {
     top: 333px;
     left: 325px;
     width: 250px;
@@ -96,11 +99,75 @@ img {
     text-indent: 20px;
 }
 
+.btn:hover {
+    background-color: #193f30;
+    cursor: pointer ;
+}
+
+
 @media (min-width: 1440px) {
     .box {
         position: relative;
         left: 420px;
-        top: 250px;
+        top: 200px;
     }
 }
 
+@media (max-width: 375px) {
+    .box {
+        height: 550px;
+        width: 310px;
+        left: calc(50px / 2);
+        top: calc(100px / 2);
+    }
+
+
+    .desktop {
+        visibility: hidden;
+    }
+
+    .mobile {
+        visibility: visible;
+        height: 210px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .category {
+        top: 230px;
+        left: 20px;
+    }
+
+    .name {
+        top: 260px;
+        left: 20px;
+        font-size: 27px;
+    }
+
+    .discription {
+        top: 335px;
+        left: 20px;
+        font-size: 12px;
+        padding-right: 10px;
+    }
+
+    .price-new {
+        top: 425px;
+        left: 20px;
+        font-size: 30px;
+    }
+
+    .price-old {
+        top: 435px;
+        left: 165px;
+    }
+
+    .btn {
+        top: 480px;
+        left: 25px;
+    }
+
+    .attribution {
+        left: 20px;
+    }
+}
