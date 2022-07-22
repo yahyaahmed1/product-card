@@ -115,7 +115,7 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .box {
         height: 550px;
         width: 310px;
